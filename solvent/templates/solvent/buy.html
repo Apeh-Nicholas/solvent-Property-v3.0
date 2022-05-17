@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buy page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <ul class="topnav" id="myTopnav">
+    <li><a href="{% url 'solvent:index' %}">Home</a></li>
+    <li><a href="{% url 'solvent:aboutus' %}">About Us</a></li>
+    <li><a href="{% url 'solvent:buy' %}">Buy</a></li>
+    <li><a href="{% url 'solvent:forrent' %}">For Rent</a></li>
+    <li><a href="{% url 'solvent:land' %}">Land</a></li>
+    <li><a href="{% url 'solvent:contactus' %}">Contauct Us</a></li>
+    <li class="icon">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </li>
+    </ul>
+
+			<!-- end of narbar -->
+<div class="buybg-img" style=" background-image: url({% static 'sp/prop9.jpg' %})">
+		<h1 style="padding-top: 50px; padding-left: 30px; color: red;">fill the form below, to enable us connect to you to various properties available in choosen geographical location</h1>
+		<div class="conform">
+       <h2 id="msg">{{ msg }}</h2>
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ solventPropertyForm.as_p }}
+        <button id="lastbb">Submit</button>
+    </form>
+
+  </div>
+		
+	</div>	
+		<!--buybgimg  -->
+<div style="background-color: gray; color: white; text-align: center;">
+	<h1 class="">Click on the images below to connect with <br> different estate agency in Port Harcourt for free</h1>
+</div>
+		<!--  end of fess header-->
+<!-- start of slideshow sction  -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="{% static 'sp/newp3.jpg' %}" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="{% static 'sp/newp4.jpg' %}" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="{% static 'sp/newp5.jpg' %}" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<!-- end slideshow -->
+<div style="background-color: gray; color:white; text-align: center; height: 60px; padding: 10px;">
+	<div><h2>Featured Project</h2></div>
+	
+</div>
+	<!-- div -->
+	 <div class="buyflex">
+      
+      <div class="buybox">
+         <div><img src="{% static 'sp/newp1.jpg' %}" style="width: 400px" height="318px;"  ></div>
+         <p class="buytext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+
+      </div>
+      <div class="buybox">
+         <div><img src="{% static 'sp/newp2.jpg' %}" style="width: 400px; height: 318px;"></div>
+         <p class="buytext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+         
+      </div>
+      <div class="buybox">
+        <div> <img src="{% static 'sp/newp3.jpg' %}" style="width: 400px; height: 318px;"></div>
+         <p class="buytext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+      </div>
+      
+   </div>
+   <!-- buyflex -->
+   <div style="background-color: gray; color:white; height: 50px; padding: 2px; text-align: center;"><h2>Some Sample Properties</h2></div>
+   <!-- end of div headbuy -->
+
+<div class="buycontain">
+  
+    <div class="buypg">
+        <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'sp/newp3.jpg' %}" alt="housepic" style="width:350px; height: 318px;">
+        
+      </div>
+      <div class="flip-card-back">
+        <h1>NICKSON N100</h1>
+        <p>Architect $ Engineer</p>
+        <p>i value you</p>
+      </div>
+      
+    </div>
+  </div>
+    </div>
+    <div class="buypg" style="padding-left: 100px;">
+      <img src=" {% static 'sp/prop3.jpg' %}" width="370px;" height="318px;">
+     
+      
+    </div>
+    <div class="buypg" >
+        <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'sp/newp4.jpg' %}" alt="housepic" style="width: 400px; height: 318px;" style="margin: 10px;">
+        
+      </div>
+      <div class="flip-card-back">
+        <h1>NICKSON N100</h1>
+        <p>Architect $ Engineer</p>
+        <p>i value you</p>
+      </div>
+      
+    </div>
+  
+  </div>
+    </div>
+</div>
+<!-- end of flipcards -->
+
+<div class="buysol"><p>solvent Property is your one number online agent website to ease your search</p></div>
+<!-- end of div -->
+<footer>
+ <section class="fmain">
+<div class="ft-main-item">
+  <h1 style="color: blue">Who We Are<hr></h1><br>
+    <p style="color: white;">Solvent Property is a growing online<br>website design to<br>serve as a MIDDLEMAN between<br>YOU and the LANDLORD with<br> team of Agents to connect you<br>to Property of your Choice.</p>
+</div>
+<div class="ft-main-item">
+   <h1 style="color: blue;">MENU<hr></h1>
+      <ul>
+     <li><a href="home.html">Home</a></li>
+     <li><a href="Contact.html">Contact us</a></li>
+     <li><a href="Aboutus.html">About us</a></li>
+     <li><a href="buy.html">Buy</a></li>
+     <li><a href="Forrent.html">For Rent</a></li>
+     <li><a href="land.html">Land</a></li>
+     <li><a href="Contactus.html">Contact us</a></li>
+  </ul>
+</div>
+  <div class="ft-main-item">
+     <h1 style="color:blue ">Quicklinks<hr></h1>
+      <ul>
+      <li><a href="Facebook.html">facebook</a></li>
+       <li><a href="Forrent.html">Instagram</a></li>
+        <li><a href="twiter.html">tweeter</a></li>
+         <li><a href="email.html">Email</a></li>
+      </ul>
+  </div>
+   <div class="ft-main-item">
+     <img src="{% static 'sp/bestbest.jpg' %}" width="300px;" height="200px;" style="margin-top: 50px;" > 
+  </div>
+ </section>
+</footer>
+<!-- end of footer -->
+<div class="lafoot">
+ <div id="foot01"></div>
+</div>
+
+
+
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].classList.remove("active");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].classList.add("active");
+
+}
+ //end of slideshow javascript code
+  document.getElementById("foot01").innerHTML = "<p>&copy; " + new Date().getFullYear() + " Solvent Property. All rights reserved.</p>";
+</script>
+<script src="{% static 'scripts.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

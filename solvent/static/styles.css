@@ -1,0 +1,674 @@
+{% load static %}
+    ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: sticky;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+        ul.topnav li {
+            float: left;
+        }
+        ul.topnav li a {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+
+        }
+        ul.topnav li a:hover{background-color: #111;}
+        ul.topnav li.icon {display: none;}
+
+        /*when screen is less than 680 pixels wide hide list vitem except home*/
+        @media screen and (max-width: 680px) {
+            ul.topnav li:not(:first-child) {display: none;}
+            ul.topnav li.icon {
+                float: right;
+                display: inline-block;
+                background-color: red;
+
+            }
+        }
+        @media screen and (max-width:680px) {
+            ul.topnav.responsive{position: relative;}
+            ul.topnav.responsive li.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+
+            }
+            ul.topnav.responsive li {
+                float: none;
+                display: inline;
+
+
+
+            }
+            ul.topnav.responsive li a {
+                display: block;
+                text-align: left;
+                
+
+            }
+        }
+        /*end of nav bar*/
+
+        .bg-img {
+           /* background-image: url("{% static 'sp/newp3.jpg' %}")*/;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            object-fit: cover;
+        }
+
+        .homepgbg {
+            /*background-image: url("{% static 'sp/prop2.jpg' %}");*/
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            object-fit: cover;
+        }
+        
+        .homeboth{
+            display: flex;
+            justify-content: center;
+            color: red;
+            font-weight: 300px;
+            width: 51%;
+        }
+        .homedes{
+            background-color: dodgerblue;
+    
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    .homeflex {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+          
+        .sawhome {
+            padding: 20px;
+
+        }
+        .sawhom,.estimg:hover{
+            opacity: 0.7;
+        }
+        .sawhome, .estimg{
+            opacity: 1;
+
+        }
+        .homeftpro{
+            text-align: center;
+            color: gray;
+            background-color: aqua;
+            padding: 8px;
+        }
+          }
+         
+        .homeh4{
+        color: white;
+            background-color: gray;
+            text-align: center;
+            padding: 10px;
+            }
+            .homeh5{
+        color: white;
+            background-color: gray;
+            text-align: center;
+            padding: 10px;
+            }
+            .homegrid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 600px){
+            .homegrid{
+                grid-template-columns: 1fr;
+                width: 100%;
+
+            }
+
+        }
+        /**/
+        
+        
+        .homecon{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .homecard{
+            background:white;
+            width: 400px;
+            height: 400px;
+            margin: 5px;
+            border-radius: 15px 15px 0 0;
+
+        }
+        .homecard:hover{
+            background-color: rgb(62, 62, 62);
+            color: white;
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: all 1s ease;
+        }
+        .card-image{
+            background-color: aqua;
+            height:300px;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        .car1{
+           /* background-image: url({% static 'sp/prop6.jpg' %});*/
+
+        }
+        .car2{
+           /* background-image: url("{% static 'sp/prop2.jpg' %}");*/
+        }
+        .car3{/*
+            background-image: url("{% static 'sp/prop4.jpg' %}");*/
+        }
+        .homecard a{background-color: black;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+
+        }
+        .homecard p{
+            padding: 10px;
+            color: white;
+            background-color: purple;
+            font-weight: bold;
+        }
+        /*end of homecard*/
+            .homebutt{
+            margin: 25px;
+            justify-content: center;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+        }
+        .homebutt:hover {
+            color: red;
+            background-color: white;
+        }
+        /*end of home page css*/
+        body {font-family: Arial;}
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 50%;
+            margin: auto;
+
+
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent { 
+            display: none;
+            padding: 6px 12px;
+            /*border: 1px solid #ccc;*/
+            border-top: none;
+            width: 100%;
+
+        }
+         
+        .topright {
+            float: right;
+            cursor: pointer;
+            font-size: 28px;
+            color: red;
+        }
+        .topright:hover {color: teal;}
+        /*end of tab css*/
+
+        
+            * {
+            box-sizing: border-box;
+        }
+        
+        .conform, .conformed {
+            /*right: 0;*/
+            margin: 20px;
+            /*max-width: 300px;*/
+            padding: 16px;
+            /*background-color: white;*/
+
+
+        }
+        /*full width input field*/
+        #msg{
+            
+            color: blue;
+            padding: 10px;
+
+        }
+
+      #id_name{
+            width: 500px;
+        }
+                #id_name, #id_phone, #id_email, #id_describe{
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border:none;
+            background:#f1f1f1;
+
+        }
+
+
+    select, .sel{
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border:none;
+            background:#f1f1f1;
+
+
+    }
+
+        #id_name:focus, #id_phone:focus, #id_describe:focus, select:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        #lastbb {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border:none;
+            cursor: pointer;
+            width: 50%;
+            opacity: 0.9;
+            border-radius: 30px;
+        }
+        #lastbb:hover {
+            opacity: 1;
+
+        }
+        
+        @media screen and (max-width: 600px){
+            form{
+                
+                justify-content: center;
+                 }
+                 .conform{
+                    width: 100%;
+                 }
+            .tabcontent{
+                width: 100%;
+
+            }
+    
+                 
+            .tab{
+                width: 100%;
+            }
+            .tryhm{
+            width: 100%;
+             }
+
+            .hmform{
+                width: 100%;
+            }
+        }
+        /*end of tab*/
+
+            .ft-main, .fmain {
+            padding: 1.25rem 1.875rem;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .ft-main-item {
+            padding: 1.25rem;
+            min-width: 12.5;
+        }
+        @media only screen and (min-width: 29.8125rem) {
+            .ft-main, .fmain {
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (min-width: 77.5rem) {
+            .ft-main, .fmain {
+                justify-content: space-between;
+            }
+        }
+        footer {
+            background-color:black;
+        
+        }
+        .lafoot{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            margin-top: -16px;
+            height:30px;
+
+        }
+
+        /**/
+        .buybg-img {
+           /* background-image: url("{% static 'sp/prop9.jpg' %}");*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            object-fit: cover;
+
+        }
+        .buyflex{
+         display: flex;
+         flex-wrap: wrap;
+
+      }
+      .buybox{
+         padding: 10px;
+         border: 1px solid green;
+          }
+          .buytext{
+            background-color:brown;
+            color:white;
+            text-align: center;
+          }
+        /* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 50s;
+  animation-name: fade;
+  animation-duration: 50s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 4} 
+  to {opacity: 9}
+}
+
+@keyframes fade {
+  from {opacity: 4} 
+  to {opacity: 9}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .slprev, .slnext,.text {font-size: 11px}
+}
+/*end of slideshow buy css*/
+.flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility:hidden;
+            backface-visibility: hidden;
+        }
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        /*end of flipcard*/
+        .buycontain{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .buypg{
+            padding: 10px;
+        }
+        .buysol{
+            background-color: green;
+            color:white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        /*eon */
+        .landimg {
+            /*background-image: url("{% static 'sp/prop7.jpg' %}");*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            object-fit: cover;
+        }
+
+.landcontain{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sawland{
+    padding: 40px;
+}
+.landflex, .landing{
+    display: flex;
+    flex-wrap: wrap;
+}
+.landsa, .lander{
+    padding: 20px;
+}
+.landsa p{
+    background-color: brown;
+    color: white;
+    text-align: center;
+}
+.lander p{
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+/*end of land css*/
+
+.rentbg-img {
+            /*background-image: url("{% static 'sp/rent11.jpg' %}")*/;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            object-fit: cover;
+        }
+.renting{
+    display: flex;
+    flex-wrap: wrap;
+}
+.renter{
+    padding: 20px;
+}       
+    
+    .lastrent{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ren{
+    padding: 20px;
+}   
+.ltp{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+    .abtflex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color:black;
+          } 
+          .abtus{
+            padding: 80px;
+            /*border:1px solid gray;*/
+          } 
+     .abttflex{
+        display: flex;
+        flex-wrap: wrap;
+     }   
+     .abtbox{
+        padding: 20px;
+     }
+       .contaflex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+         
+          } 
+          .conus{
+            padding: 80px;
+ 
+          }   
+  .tactusflex{
+    display: flex;
+    flex-wrap: wrap;
+} 
+  .tus{
+    padding: 20px;
+  } 
+   .flextainer{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+  .sak{
+padding: 10px;
+  } 
+   
+

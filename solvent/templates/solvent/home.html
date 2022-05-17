@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home-page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<style>
+		
+	</style>
+</head>
+<body>
+		<ul class="topnav" id="myTopnav">
+		<li><a href="{% url 'solvent:index' %}">Home</a></li>
+		<li><a href="{% url 'solvent:aboutus' %}">About Us</a></li>
+		<li><a href="{% url 'solvent:buy' %}">Buy</a></li>
+		<li><a href="{% url 'solvent:forrent' %}">For Rent</a></li>
+		<li><a href="{% url 'solvent:land' %}">Land</a></li>
+		<li><a href="{% url 'solvent:contactus' %}">Contauct Us</a></li>
+		<li class="icon">
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</li>
+		</ul>
+		<!-- end of narbar -->
+		<div class=" homepgbg" style="background-image: url({% static 'sp/prop2.jpg' %})">
+	<div class="homeboth"><h1>Find Your Next Home</h1></div>
+	<div class="tryhm" style="width: 51%; margin: 1px; background-color: teal;">
+<div class="tab">
+	<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">BUY</button>
+	<button class="tablinks" onclick="openCity(event, 'Paris')">RENT</button>
+	<button class="tablinks" onclick="openCity(event, 'Tokyo')">LAND</button>
+</div> 
+
+
+<div id="London" class="tabcontent">
+	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	<div class="bg-img" style=" background-image: url({% static 'sp/newp3.jpg' %})">
+		<h1 style="padding-top: 50px; padding-left: 30px; color: red;">fill the form below, let help you search</h1>
+     <div class="hmform">
+      <h2 id="msg">{{ msg }}</h2>
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ solventPropertyForm.as_p }}
+        <button id="lastbb">Submit</button>
+    </form>
+  </div>
+		
+	</div>
+</div>
+<div id="Paris" class="tabcontent">
+	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	<div class="rentbg-img" style="background-image: url({% static 'sp/rent11.jpg' %})">
+		<h1 style="padding-top: 50px; padding-left: 30px; color: red;">fill the form below, let help you search</h1>
+     <div class="hmform">
+      <h2 id="msg">{{ msg }}</h2>
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ solventPropertyForm.as_p }}
+        <button id="lastbb">Submit</button>
+    </form>
+  </div>
+			
+	</div>
+</div>
+<div id="Tokyo" class="tabcontent">
+	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	<div class="landimg" style="background-image: url({% static 'sp/prop7.jpg' %})">
+		<h1 style="padding-top: 50px; padding-left: 30px; color: red;">fill the form below, let help you search</h1>
+      <div class="hmform">
+       <h2 id="msg">{{ msg }}</h2>
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ solventPropertyForm.as_p }}
+        <button id="lastbb">Submit</button>
+    </form>
+  </div>
+		
+	</div>
+</div>
+</div>
+</div>
+<!-- end bg content img -->
+
+<div class="homedes"> <h1>Click on the the images below to connect with<br> different estate agency in Port harcourt for free</h1></div>
+<!-- homedes -->
+<div class="homeflex">
+		<div class="sawhome">
+			<a href="https://adronhomesproperties.com"><img class="estimg" src="{% static 'sp/estate4.jpg' %}" style="width: 250px; height: 150px;"></a>
+		</div>
+		<div class="sawhome">
+			<a href="www.propertypro.com"><img class="estimg" src="{% static 'sp/estate2345.jpg' %}" style="width: 250px; height: 150px; "></a>
+		</div>
+		<div class="sawhome">
+			<a href="https://www.listproperty.ng/"><img class="estimg" src="{% static 'sp/estate3.png' %}" style="width: 250px; height: 150px;"></a>
+		</div>
+		<div class="sawhome">
+			<a href="https://pacificgolfestate.in"><img class="estimg" src="{% static 'sp/estate5.png' %}" style="width: 250px; height: 150px;"></a>
+		</div>
+		</div>
+		<!-- homeflex -->
+<div class="homeftpro">
+<h2>feaTured proJect</h2>
+</div>
+<!-- homeftpro -->
+<div class="landflex">
+    
+    <div class="landsa">
+      <img src="{% static 'sp/prop10.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+
+    </div>
+    <div class="landsa">
+      <img src="{% static 'sp/newp3.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+      
+    </div>
+    <div class="landsa">
+      <img src="{% static 'sp/newp6.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+    </div>
+    
+   </div>
+    <!-- section -->
+    <div style="color: white;
+      background-color: gray;
+      text-align: center;
+      padding: 10px;">
+  <h4 class="homeh4">Some proPerties</h4>
+</div>
+<!-- homeh4 -->
+<div class="homegrid">
+    <div>
+      <section>
+    <img class="mySlidess" src="{% static 'sp/prop9.jpg' %}">
+    <img class="mySlidess" src="{% static 'sp/prop10.jpg' %}">
+    <img class="mySlidess" src="{% static 'sp/prop4.jpg' %}" style="width: 450px;">
+  </section>
+    </div>
+    <div><img src="{% static 'sp/rent11.jpg' %}" style="border: 1px solid red; display: block;"></div>
+  </div>
+  <!-- homegrid -->
+  <div>
+  <h5 class="homeh5">Some Featured Projects</h5>
+</div>
+<!-- homeh5 -->
+<div class="homecon">
+    <div class="homecard">
+      <div class="card-image car1" style=" background-image: url({% static 'sp/prop6.jpg' %})"></div>
+      <p>fill in the form to enable us help you with your search</p>
+      <a href="https://nigeriapropertycentre.com"><button>SEARCH</button></a>
+    </div>
+    <div class="homecard">
+      <div class="card-image car2" style=" background-image: url({% static 'sp/prop2.jpg' %})"></div>
+      <p>fill in the form to enable us help you with your search</p>
+      <a href="buy222.html"><button>SEARCH</button></a>
+    </div>
+    <div class="homecard">
+      <div class="card-image car3" style=" background-image: url({% static 'sp/prop4.jpg' %})"></div>
+      <p>fill in the form to enable us help you with your search</p>
+      <a href="land444.html"><button>SEARCH</button></a>
+    </div>
+    <!--  -->
+  </div>
+  <!-- homecard -->
+<div style="background-color: aqua; height: 100px; margin-top: 50px;">
+ 
+    <div style="display: flex; justify-content: center;">
+      <a href="buy222.html"><button class="homebutt">let's discus your search</button> </a>
+    </div>
+  
+</div>
+<!-- homebutt -->
+<footer>
+ <section class="ft-main">
+<div class="ft-main-item">
+  <h1 style="color: blue">Who We Are<hr></h1><br>
+    <p style="color: white;">Solvent Property is a growing online<br>website design to<br>serve as a MIDDLEMAN between<br>YOU and the LANDLORD with<br> team of Agents to connect you<br>to Property of your Choice.</p>
+</div>
+<div class="ft-main-item">
+   <h1 style="color: blue;">MENU<hr></h1>
+      <ul>
+     <li><a href="home111.html">Home</a></li>
+     <li><a href="Contact000.html">Contact us</a></li>
+     <li><a href="Aboutus999.html">About us</a></li>
+     <li><a href="buy222.html">Buy</a></li>
+     <li><a href="Forrent555.html">For Rent</a></li>
+     <li><a href="land444.html">Land</a></li>
+     <li><a href="Contactus000.html">Contact us</a></li>
+  </ul>
+</div>
+  <div class="ft-main-item">
+     <h1 style="color:blue ">Quicklinks<hr></h1>
+      <ul>
+      <li><a href="m.facebook.com/ApehNickson">facebook</a></li>
+       <li><a href="https://Instagram.com">Instagram</a></li>
+        <li><a href="https://mobile.twitter.com">tweeter</a></li>
+         <li><a href="www.apehnicholas33@gmail.com">Email</a></li>
+      </ul>
+  </div>
+   <div class="ft-main-item">
+     <img src="{% static 'sp/bestbest.jpg' %}" width="300px;" height="200px;" style="margin-top: 50px;" > 
+  </div>
+ </section>
+</footer>
+<!-- end of footer -->
+<div class="lafoot">
+ <div id="foot01"></div>
+</div>
+
+  <script>
+      var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlidess");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+     document.getElementById("foot01").innerHTML = "<p>&copy; " + new Date().getFullYear() + " Solvent Property. All rights reserved.</p>";
+  </script>
+
+<script src="{% static 'scripts.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>land page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+  <ul class="topnav" id="myTopnav">
+    <li><a href="{% url 'solvent:index' %}">Home</a></li>
+    <li><a href="{% url 'solvent:aboutus' %}">About Us</a></li>
+    <li><a href="{% url 'solvent:buy' %}">Buy</a></li>
+    <li><a href="{% url 'solvent:forrent' %}">For Rent</a></li>
+    <li><a href="{% url 'solvent:land' %}">Land</a></li>
+    <li><a href="{% url 'solvent:contactus' %}">Contauct Us</a></li>
+    <li class="icon">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </li>
+    </ul>
+    <!-- end of narbar -->
+<div class="landimg" style="background-image: url({% static 'sp/prop7.jpg' %})">
+    <h1 style="padding-top: 50px; padding-left: 30px; color: red;">fill the form below, to enable us connect to you to various properties available in choosen geographical location</h1>
+    <div class="conform">
+       <h2 id="msg">{{ msg }}</h2>
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ solventPropertyForm.as_p }}
+        <button id="lastbb">Submit</button>
+    </form>
+  
+  </div>
+    
+  </div>  
+  <!-- end of landbg -->
+    <div style="background-color: gray; color: white; text-align: center;">
+      <h1>Click on the images below to connect with <br> different estate agency in Port Harcourt for free</h1>
+    </div>
+    <!-- end of clikbuy -->
+<div class="landcontain">
+    
+    <div class="sawland">
+      <a  href="www.propertypro.com"><img src="{% static 'sp/estate2.jpg' %}" style="width: 250px; height: 150px;"></a>
+
+    </div>
+    <div class="sawland">
+      
+    <a  href="https://www.privateproperty.com.ng
+"><img src="{% static 'sp/estate4.jpg' %}" style="width: 250px; height: 150px;"></a>
+      
+    </div>
+    <div class="sawland">
+      <a href="http://suncitygarden.org"><img src="{% static 'sp/estate3.png' %}" style="width: 250px; height: 150px;"></a>
+    </div>
+      <div class="sawland">
+      
+    <a href="https://pacificgolfestate.in"><img src="{% static 'sp/estate5.png' %}" style="width: 250px; height: 150px;"></a>
+    </div>
+    
+   </div>
+      <!--end of buycontain  -->
+      <div><h5 style="background-color:brown; color: white; height: 80px; text-align: center; padding:6px; font-size: 50px; font-weight: bold;">feaTured proJect</h5>
+</div>  
+<!-- end of ftpro -->
+ <div class="landflex">
+    
+    <div class="landsa">
+      <img src="{% static 'sp/land6.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+
+    </div>
+    <div class="landsa">
+      <img src="{% static 'sp/newp10.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+      
+    </div>
+    <div class="landsa">
+      <img src="{% static 'sp/land4.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+    </div>
+    
+   </div>
+   <!-- end of landflex -->
+   <div>
+    <p style="background-color:tomato; color: white; text-align: center; padding: 8px; font-size: 30px; height: 80px;">solvent Property is your online agent website to ease your search</p></div>
+    <!-- div end -->
+    <div class="landing">
+    
+    <div class="lander">
+      <img src="{% static 'sp/land1.jpeg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+
+    </div>
+    <div class="lander">
+      <img src="{% static 'sp/land29.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+      
+    </div>
+    <div class="lander">
+      <img src="{% static 'sp/newp1.jpg' %}" width="400px;" height="318px;">
+      <p class="abttext">fill in the form to enable us get you <br>your desire property of your choice on a go</p>
+    </div>
+    
+   </div>
+   <!-- end of landing -->
+
+   <footer>
+ <section class="ft-main">
+<div class="ft-main-item">
+  <h1 style="color: blue">Who We Are<hr></h1><br>
+    <p style="color: white;">Solvent Property is a growing online<br>website design to<br>serve as a MIDDLEMAN between<br>YOU and the LANDLORD with<br> team of Agents to connect you<br>to Property of your Choice.</p>
+</div>
+<div class="ft-main-item">
+   <h1 style="color: blue;">MENU<hr></h1>
+      <ul>
+     <li><a href="home111.html">Home</a></li>
+     <li><a href="Contact000.html">Contact us</a></li>
+     <li><a href="Aboutus999.html">About us</a></li>
+     <li><a href="buy222.html">Buy</a></li>
+     <li><a href="Forrent555.html">For Rent</a></li>
+     <li><a href="land.html">Land</a></li>
+     <li><a href="Contactus.html">Contact us</a></li>
+  </ul>
+</div>
+  <div class="ft-main-item">
+     <h1 style="color:blue ">Quicklinks<hr></h1>
+      <ul>
+        <li><a href="m.facebook.com/ApehNickson">facebook</a></li>
+        <li><a href="https://Instagram.com">Instagram</a></li>
+        <li><a href="https://mobile.twitter.com">tweeter</a></li>
+        <li><a href="www.apehnicholas33@gmail.com">Email</a></li>
+      </ul>
+  </div>
+   <div class="ft-main-item">
+     <img src="{% static 'sp/bestbest.jpg' %}" width="300px;" height="200px;" style="margin-top: 50px;" > 
+  </div>
+ </section>
+</footer>
+<!-- end of footer -->
+<div class="lafoot">
+ <div id="foot01"></div>
+</div>
+
+<script>
+  
+document.getElementById("foot01").innerHTML = "<p>&copy; " + new Date().getFullYear() + " Solvent Property. All rights reserved.</p>";
+</script>
+<script src="{% static 'scripts.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

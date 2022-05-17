@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contact us page</title>
+			<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <style>
+    .row h1 {
+      color: white; 
+      text-align: center;
+       font-weight: bold; 
+       padding: 8px;
+       background-color: gray;
+    }
+  </style>
+</head>
+<body>
+	<ul class="topnav" id="myTopnav">
+		<li><a href="{% url 'solvent:index' %}">Home</a></li>
+    <li><a href="{% url 'solvent:aboutus' %}">About Us</a></li>
+    <li><a href="{% url 'solvent:buy' %}">Buy</a></li>
+    <li><a href="{% url 'solvent:forrent' %}">For Rent</a></li>
+    <li><a href="{% url 'solvent:land' %}">Land</a></li>
+    <li><a href="{% url 'solvent:contactus' %}">Contauct Us</a></li>
+		<li class="icon">
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</li>
+    </ul>
+		<!-- end of narbar -->
+
+ <div>
+     <img src="{% static 'sp/getin.jpeg' %}" style="width: 99%; height: 300px;">
+ </div>
+ <!-- contact img end -->
+
+    <div class="contaflex">
+        <div class="conus">
+	<div class="hoff"><h1>Head office</h1><hr></div>
+	<div class="addres"><p>NO 12, Ugunda Street<br>Off pipeline Road<br>Emeru Eliobgolo<br>Rumuodomaya<br>Port Harcourt<br>Rivers State.<br>Tel:09033338108</p></div>
+        </div>
+        <div class="conus">
+            
+    <div class="abtimg">
+     <h1 class="quick">Quicklinks<hr></h1>
+    <ul>
+      <li><a href="Facebook.html">Facebook</a></li>
+      <li><a href="Forrent.html">Instagram</a></li>
+      <li><a href="twiter.html">tweeter</a></li>
+      <li><a href="email.html">Email</a></li>
+      <li><a href="email.html">Whatsapp</a></li>
+    </ul> 	
+            
+        </div>
+        
+    </div>
+    <!-- address end -->
+ <!--  <div class="container-fluid">
+	<div class="row">
+		<h1>Search For Your Geographic Location</h1>
+		
+	</div>
+</div> -->
+<section style="width: 100%; background-color: gray; color: white; text-align: center; font-weight: bold; padding: 10px;">Search For Your Geographic Location</section>
+  <!-- fluid end -->
+
+    <div class="tactusflex">
+        <div class="tus">
+	 <iframe style="width: 500px; height: 546px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.781220034903!2d6.982000314263319!3d4.807587342061313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cf8aa16abd05%3A0x7449dcd4d815eec4!2sElitePath%20Software!5e0!3m2!1sen!2sng!4v1614455714702!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="tus">
+            
+    <img src="{% static 'sp/rent6.jpg' %}" style="width: 500px; height:500px; ">
+      <div>
+      <p style="background-color: teal; color: white; text-align: center;">fill in the form to enable us get you <br>your desire property of your choice on a go</p></div> 	
+            
+        </div>
+        
+    </div>
+    <!-- end of map pg -->
+  <!--    <div class="container-fluid" style="background-color:blue;">
+	<div class="row">
+		<h1 style="color: white; text-align: center; font-weight: bold; padding: 8px;">with just a click we are here for you</h1>
+		
+	</div>
+</div> -->
+
+  <section style="width: 100%; background-color: blue; color: white; text-align: center; font-weight: bold; padding: 10px;">with just a click we are here for you</section>
+
+<!-- end div -->
+<div class="flextainer">
+   	
+   	<div class="sak">
+   		<a  href=""><img src=" {% static 'sp/watsapp.jpg' %}" style="width: 250px; height: 150px;"></a>
+
+   	</div>
+   	<div class="sak">
+   		
+    <a  href="https://www.facebook.com
+"><img src="{% static 'sp/fb.png' %}" style="width: 250px; height: 150px;"></a>
+   		
+   	</div>
+   	<div class="sak">
+   		<a href="http://"><img src="{% static 'sp/insta.jpg' %}"style="width: 250px; height: 150px;"></a>
+   	</div>
+   	 	<div class="sak">
+   		
+    <a  href="https://www.twitter.com"><img src="{% static 'sp/twiter.png' %}" style="width: 250px; height: 150px;"></a>
+   	</div>
+   	
+   </div>
+   <!-- end of sociasl -->
+       <footer style="width: 100%;">
+ <section class="ft-main">
+<div class="ft-main-item">
+  <h1 style="color: blue">Who We Are<hr></h1><br>
+    <p style="color: white;">Solvent Property is a growing online<br>website design to<br>serve as a MIDDLEMAN between<br>YOU and the LANDLORD with<br> team of Agents to connect you<br>to Property of your Choice.</p>
+</div>
+<div class="ft-main-item">
+   <h1 style="color: blue;">MENU<hr></h1>
+      <ul>
+     <li><a href="home.html">Home</a></li>
+     <li><a href="Contact.html">Contact us</a></li>
+     <li><a href="Aboutus.html">About us</a></li>
+     <li><a href="buy.html">Buy</a></li>
+     <li><a href="Forrent.html">For Rent</a></li>
+     <li><a href="land.html">Land</a></li>
+     <li><a href="Contactus.html">Contact us</a></li>
+  </ul>
+</div>
+  <div class="ft-main-item">
+     <h1 style="color:blue ">Quicklinks<hr></h1>
+      <ul>
+      <li><a href="Facebook.html">facebook</a></li>
+       <li><a href="Forrent.html">Instagram</a></li>
+        <li><a href="twiter.html">tweeter</a></li>
+         <li><a href="email.html">Email</a></li>
+      </ul>
+  </div>
+   <div class="ft-main-item">
+     <img src="{% static 'sp/bestbest.jpg' %}" width="300px;" height="200px;" style="margin-top: 50px;" > 
+  </div>
+ </section>
+</footer>
+<!-- end of footer -->
+ <!--  <div class="container-fluid" style="background-color:blue; color: white; text-align: center;">
+	<div class="row"> -->
+		 <section id="foot" style="background-color:blue; color: white; text-align: center; width: 100%;" ></section>
+	<!-- </div>
+</div>  -->
+
+
+
+ 
+   
+
+<script>
+document.getElementById("foot").innerHTML = "<p>&copy; " + new Date().getFullYear() + " Solvent Property. All rights reserved.</p>";
+</script>
+<script src="{% static 'scripts.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
